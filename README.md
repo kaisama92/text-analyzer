@@ -145,6 +145,19 @@ const text = "hello there";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
 
+# Describe: totalWordCounter()
+Test: "It should return 0 if the string is empty."
+Code: 
+const text = "";
+Expected Output: 0
+
+Test: "It should return the word and 1 for a one word string."
+Code: 
+const text = "hello";
+Expected Output: "hello: 1"
+
+Test: It should return 
+
 ## Setup/Installation Requirements
 
 * _Clone this repository to your desktop_

@@ -20,6 +20,15 @@ function wordCounter(text) {
   return wordCount;
 };
 
+function totalWordCounter(text) {
+  if (isEmpty(text)) {
+    return null;
+  }
+  const word = text.toString() + ": " + wordCounter(text);
+  
+  return word;
+}
+
 function numberOfOccurrencesInText(word, text) {
   if (isEmpty(word)) {
     return 0;

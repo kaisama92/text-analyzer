@@ -1,6 +1,6 @@
 # _text-analyzer_
 
-#### By ***Kai Clausen***
+#### By ***Kai Clausen and Hyung Jin Kim***
 
 #### _This application creates testing functionality for TDD_
 
@@ -122,4 +122,4 @@ Expected Output: "@$% That @$% of a @$% told him to do a @$%"
 
 _MIT - Should you encounter any problems, feel free to fix them yourself, or contact Kai at kaiclausen123@gmail.com_
 
-Copyright (c) _2023_ _Kai Clausen_
+Copyright (c) _2023_ _Kai Clausen and Hyung Jin Kim_

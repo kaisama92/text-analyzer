@@ -10,7 +10,7 @@
 
 ## Description
 
-Describe: wordCounter()
+# Describe: wordCounter()
 
 Test: "It should return 1 if a passage has just one word."
 Code: 
@@ -36,7 +36,7 @@ Test: "It should not count numbers as words."
 Code: wordCounter("hi there 77 19");
 Expected Output: 2
 
-Describe: numberOfOccurrencesInText()
+# Describe: numberOfOccurrencesInText()
 
 Test: "It should return 0 occurrences of a word for an empty string."
 Code:
@@ -80,7 +80,31 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
-# Description - omitEveryOccurenceOfWordInText()
+# Description - replaceOffensiveWords()
+
+Test: "It should identify an offensive word in an element."
+Code: 
+const text = "Zoinks! That biffaroni of a muppeteer told him to do a loopdaloop!";
+const words = "zoinks", "biffaroni", "muppeteer", "loopdaloop";
+Expected Output: True
+
+Test: "It should insert "@$%" when the offensive words appear."
+Code: 
+const text = "Zoinks! That biffaroni of a muppeteer told him to do a loopdaloop!";
+const words = "zoinks", "biffaroni", "muppeteer", "loopdaloop";
+Expected Output: "@$%", "@$%", "@$%", "@$%", "@$%", "@$%", "@$%", "@$%", "@$%", "@$%", "@$%", "@$%"
+
+Test: "It should only replace the words that are offensive."
+Code: 
+const text = "Zoinks! That biffaroni of a muppeteer told him to do a loopdaloop!";
+const words = "zoinks", "biffaroni", "muppeteer", "loopdaloop";
+Expected Output: "@$%", "That", "@$%", "of", "a", "@$%", "told", "him", "to", "do", "a", "@$%"
+
+Test: "It should return a sentence cleaned of offensive words."
+Code: 
+const text = "Zoinks! That biffaroni of a muppeteer told him to do a loopdaloop!";
+const words = "zoinks", "biffaroni", "muppeteer", "loopdaloop";
+Expected Output: "@$% That @$% of a @$% told him to do a @$%"
 
 ## Setup/Installation Requirements
 

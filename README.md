@@ -149,14 +149,17 @@ Expected Output: <p><strong>hello</strong> there</p>
 Test: "It should return 0 if the string is empty."
 Code: 
 const text = "";
-Expected Output: 0
+Expected Output: null
 
 Test: "It should return the word and 1 for a one word string."
 Code: 
 const text = "hello";
 Expected Output: "hello: 1"
 
-Test: It should return 
+Test: "It should return each word in the text."
+Code: 
+const text = "hello there"
+Expected Output "hello", "there"
 
 ## Setup/Installation Requirements
 

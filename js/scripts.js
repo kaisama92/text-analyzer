@@ -98,7 +98,7 @@ function replaceOffensiveWords(text) {
   const loopdaloop = "loopdaloop";
   newArray.forEach(function(element) {
     if(element.toLowerCase().includes(zoinks.toLowerCase()) || element.toLowerCase().includes(muppeteer.toLowerCase()) || element.toLowerCase().includes(biffaroni.toLowerCase()) || element.toLowerCase().includes(loopdaloop.toLowerCase())) {
-      element = "***";
+      element = "@$%";
       array1.push(element);
     } else {
       array1.push(element);

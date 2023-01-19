@@ -34,20 +34,46 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
+    // let newWordCount = 0;
+    // wordCount = newWordCount + numberOfOccurrencesInText(element1, words);
+    // container += word + " " + wordCount;
+
 function totalWordCounter(words) {
+  let array = [];
+  let array1 = [];
+  const totalWordArray = words.split(" ");
+  let container = [];
+  // container += totalWordArray [0];
+  let wordCount = 0;
   if (isEmpty(words)) {
     return null;
-  }
-  const totalWordArray = words.split(" ");
-  let container = "";
-  let wordCount = 0
-  // const word = text.toString() + ": " + wordCounter(text);
-  totalWordArray.forEach(function(word) {
-    let newWordCount = 0
-    wordCount = newWordCount + numberOfOccurrencesInText(word, words);
-    container += word + " " + wordCount;
+  } else {
+    totalWordArray.forEach(function(element1) {
+      if (container.includes(element1.toLowerCase())) {
+      } else {
+        container.push(element1.toLowerCase());
+        wordCount = 0
+        totalWordArray.forEach(function(element2) {
+          if (element1.toLowerCase() === element2.toLowerCase()) {
+            wordCount++
+          }
+        });
+        container.push(": " + wordCount + ", ");
+      }
+    })
+
     
-  })
+  // const word = text.toString() + ": " + wordCounter(text);
+  // totalWordArray.forEach(function(element1) {
+  //   if (container.toLowerCase().includes(element1.toLowerCase())) {
+  //   totalWordArray.forEach(function (element2) {
+  //     if(element1 === element2) {
+  //       wordCount += 1;
+  //       }
+  //     });
+  //   }
+  //   });
+  }
   // return word; 
   return container;
 }
